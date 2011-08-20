@@ -6,3 +6,16 @@
 if exists ("b:current_syntax")
         finish
 endif
+
+" Keywords
+
+syn keyword declKeywords DATA ATTR SEM TYPE
+syn keyword controlKeywords INCLUDE nextgroup=string
+
+syn match stringLit '\"[^\"]*\"'
+
+let b:current_syntax = "uuagc"
+
+hi def link declKeywords Statement
+hi def link controlKeywords Statement
+hi def link stringLit String
