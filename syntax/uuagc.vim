@@ -7,18 +7,17 @@ if exists ("b:current_syntax")
         finish
 endif
 
-" Keywords
+syntax sync fromstart
 
-syn keyword declKeywords DATA ATTR SEM TYPE
-syn keyword controlKeywords INCLUDE nextgroup=string
-
-syn match stringLit '\"[^\"]*\"'
-syn match attribute '@[a-z][a-zA-Z\'\.]*' 
-" TODO: are variables allowed to contain @'s after the first one?
+runtime syntax/haskell.vim
 
 let b:current_syntax = "uuagc"
 
-hi def link declKeywords Statement
-hi def link controlKeywords Statement
-hi def link stringLit String
-hi def link attribute Identifier
+syn keyword attrKeywords loc lhs skip='\.' nextgroup=attribute
+syn keyword declKeywords DATA ATTR SEM TYPE INCLUDE MAYBE 
+syn match fieldName  '@[a-z][a-zA-Z0-9\']*' 
+" TODO: are variables allowed to contain @'s after the first one?
+
+hi def link declKeywords    Statement
+hi def link attrKeywords    Statement
+hi def link fieldName       Identifier
