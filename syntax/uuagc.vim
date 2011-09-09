@@ -14,7 +14,7 @@ runtime syntax/haskell.vim
 let b:current_syntax = "uuagc"
 
 syn keyword attrKeywords loc lhs skip='\.' nextgroup=attribute
-syn keyword declKeywords DATA ATTR SEM TYPE INCLUDE MAYBE 
+syn keyword declKeywords DATA ATTR SEM TYPE MAYBE USE SELF AROUND MERGE WRAPPER
 syn match fieldName  '@[a-z][a-zA-Z0-9\']*' 
 " TODO: are variables allowed to contain @'s after the first one?
 
