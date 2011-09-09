@@ -25,8 +25,8 @@ syn keyword pragmas strictdata strictwrap datarecords optpragams
 syn match fieldName  '@[a-z][a-zA-Z0-9\']*' 
 " TODO: are variables allowed to contain @'s after the first one?
 
-hi def link declKeywords    Statement
-hi def link attrKeywords    Statement
+hi def link declKeywords    Keyword
+hi def link attrKeywords    Keyword
 hi def link fieldName       Identifier
 
 hi def link directives      PreProc
