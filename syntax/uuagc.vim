@@ -13,7 +13,7 @@ runtime syntax/haskell.vim
 
 let b:current_syntax = "uuagc"
 
-syn keyword attrKeywords loc lhs skip='\.' nextgroup=attribute
+syn keyword attrKeywords loc lhs skip='\.' 
 syn keyword declKeywords DATA ATTR SEM TYPE MAYBE USE SELF AROUND MERGE WRAPPER
 syn keyword directives INCLUDE
 
